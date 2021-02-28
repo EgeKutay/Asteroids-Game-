@@ -332,7 +332,10 @@ void Game::updateBullet()
 	{
 		spawnBullet(ship.getPosition());
 		fireBullet = false;
-		points += -1;
+		if(points>0)
+		{
+		 points -= 1;
+		}
 	}
 
 	for (int i = 0; i < Bullets.size(); i++)
